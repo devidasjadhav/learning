@@ -1,0 +1,42 @@
+start xyz
+set args xyz
+
+info inferiors
+attach pid
+detach
+inferior numb
+add-inferior -copies x -exec binary
+remove-inferior
+
+detach inferior nu
+kill inferior nu
+set print inferior-events on|off
+show print inferior-events
+
+maint info program-spaces
+
+
+|04.1|  Operators and motions
+
+N <cmd> <motion>
+
+<cmd> N <motion
+N <cmd> M <motion>
+
+
+        x  stands for  dl  (delete character under the cursor)
+        X  stands for  dh  (delete character left of the cursor)
+        D  stands for  d$  (delete to end of the line)
+        C  stands for  c$  (change to end of the line)
+        s  stands for  cl  (change one character)
+        S  stands for  cc  (change a whole line)
+
+|04.2|  Changing text
+|04.3|  Repeating a change
+|04.4|  Visual mode
+|04.5|  Moving text
+|04.6|  Copying text
+|04.7|  Using the clipboard
+|04.8|  Text objects
+|04.9|  Replace mode
+|04.10| Conclusion

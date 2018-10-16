@@ -1,0 +1,1001 @@
+ cat OES_New.json
+ vi OES_New.json
+ ./run_packer.sh test
+ vi OES_New.json
+ vi run_packer.sh
+ ./run_packer.sh test
+ rm -fr packer_cache/
+ ./run_packer.sh test
+ vi OES_New.json
+ ./run_packer.sh test
+ vagrant up oes1
+ vi run_packer.sh
+ ./run_packer.sh test
+ cat ./run_packer.sh
+ rm ../builds/*
+ cat ./run_packer.sh
+ while true; do
+ baseName="vagrantBox$(date +%d%b%y-%H%m%S)"
+ while true; do echo $baseName ; sleep 1 ; done
+ baseName='vagrantBox$(date +%d%b%y-%H%m%S)'
+ while true; do echo $baseName ; sleep 1 ; done
+ baseName='vagrantBox`date +%d%b%y-%H%m%S`'
+ while true; do echo $baseName ; sleep 1 ; done
+ ./run_packer.sh test1
+ cat ./Vagrantfile
+ vi ./run_packer.sh
+ ./run_packer.sh test1
+ vi OES_New.json
+ vi run_packer.sh
+ ./run_packer.sh test1
+ ./bin/packer build -var checksum=5f5930e102e102a738434b30c553e3c3 -var custom_iso_url=http://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/OES2018-SP1-DVD-x86_64-Beta1.13-Media1.iso -var boxbasename=vagrantBox19Sep18-110915 -var id=test1 OES_New.json
+ ./run_packer.sh test2
+ vagrant status
+ cat run_packer.sh
+ SSH_KEY_PATH='/home/dev/workspace/OES/packer/key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant destroy oes1
+ ./run_packer.sh test
+ time ./run_packer.sh test
+ ls ../builds/vagrantBox19Sep18-120949.box
+ vi scripts/vagrant.sh
+ time ./run_packer.sh test
+ vi scripts/vagrant.sh
+ time ./run_packer.sh test
+ ls ../builds/vagrantBox19Sep18-130922.box
+ ./bin/packer build -var checksum=5f5930e102e102a738434b30c553e3c3 -var custom_iso_url=http://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/OES2018-SP1-DVD-x86_64-Beta1.13-Media1.iso -var boxbasename=vagrantBox19Sep18-130922 -var id=test OES_New.json
+ man cp
+ touch a
+ mkdir b
+ cp a b
+ echo $?
+ echo "abcd" > a
+ cp a b
+ echo $?
+ cp b/a b/a
+ echo $?
+ vi scripts/vagrant.sh
+ time ./run_packer.sh test
+ SSH_KEY_PATH='/home/dev/workspace/OES/packer/key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes1
+ SSH_KEY_PATH='/home/dev/workspace/OES/packer/key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant halt
+ SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant up
+ time SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant up --parallel
+ time SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant halt --parallel
+ time SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant halt
+ time SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant up --parallel
+ SSH_KEY_PATH='/home/dev/workspace/OES/packer/key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes1
+ SSH_KEY_PATH='/home/dev/workspace/OES/packer/key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes2\
+ SSH_KEY_PATH='/home/dev/workspace/OES/packer/key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes2
+ SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes1
+ SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes2
+ vi Vagrantfile
+ xev
+ xmodmap -e "keycode 9 = Caps_Lock"
+ xmodmap -e "keycode 66 = Escape"
+ alias myKeys='xmodmap -e "keycode 9 = Caps_Lock";xmodmap -e "keycode 66 = Escape"'
+ alias origKeys='xmodmap -e "keycode 66 = Caps_Lock";xmodmap -e "keycode 9 = Escape"'
+ origKeys
+ myKeys
+ udo zypper in docker
+ sudo zypper in docker
+ docker run -d redis
+ docker run --help
+ sudo service docker restart
+ docker run -d redis
+ su
+ cd workspace/OES/packer/
+ free -h
+ for i in $(wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/OES2018-SP1-DVD-x86_64-Build0273-Media1.iso.sha256);
+ for i in $(wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/OES2018-SP1-DVD-x86_64-Build0273-Media1.iso.sha256)
+ for i in `wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/OES2018-SP1-DVD-x86_64-Build0273-Media1.iso.sha256`
+ for i in $(wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/OES2018-SP1-DVD-x86_64-Build0273-Media1.iso.sha256); do echo $i; done
+ for i in $(wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS); do echo $i; done
+ curl ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS
+ curl ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS |grep Media1.iso
+ curl -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS |grep Media1.iso
+ curl -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS |grep Media1.iso |cut -d' ' -f1
+ cat ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS
+ head $(wget -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS) |grep Media1.iso |cut -d' ' -f1
+ head $(wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS) |grep Media1.iso |cut -d' ' -f1
+ echo $(wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS) |grep Media1.iso |cut -d' ' -f1
+ echo $(wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS) |grep Media1.iso |cut -d' ' -f1|wc -l
+ echo $(wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS) |grep Media1.iso |cut -d' ' -f1
+ echo $(wget -O- -q ftp://blr-dist.blr.novell.com/dist/install/OES2018-SP1/LATEST/MD5SUMS) |grep Media1.iso |cut -d' ' -f2
+ vi run_packer.sh
+ ./run_packer.sh
+ vi run_packer.sh
+ ./run_packer.sh
+ rm *vdi
+ vi OES_New.json
+ ls /home/dev/workspace/OES/packer/key/id_rsa
+ ls -l /home/dev/workspace/OES/packer/key/id_rsa
+ chmod 666
+ chmod 666 /home/dev/workspace/OES/packer/key/id_rsa
+ ls -l /home/dev/workspace/OES/packer/key/id_rsa
+ PROMPT_COMMAND='echo -ne "\033]0;SOME TITLE HERE\007"'
+ gnome-terminal --title="SOME TITLE"
+ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+ echo -ne "\033]0;Hey There\007"
+ function set_title() { echo -ne "\033]0;${1}\007" } alias title=set_title
+ function set_title() { echo -ne "\033]0;${1}\007" }
+ function set_title() { echo -ne "\033]0;${1}\007" }; alias title=set_title;
+ echo b{{a,e},ed}s
+ man gdb
+ PROMPT_COMMAND='echo *[$?]*'
+ PROMPT_COMMAND="echo *[$?]*"
+ PROMPT_COMMAND="echo [$?]"
+ ls
+ PROMPT_COMMAND="echo -n [$?]"
+ PROMPT_COMMAND="echo -n '\033];Hello World\007'"
+ PROMPT_COMMAND="echo -ne '\033];Hello World\007'"
+ echo -ne '\033];Hello Man\007'
+ echo -ne '\033];Hello Man\007' > $TTY
+ tty
+ echo -ne '\033];Hello Man\007' > /dev/pts/0
+ bash echo -ne '\033];Hello Man\007'
+ which echo
+ bash /usr/bin/echo -ne '\033];Hello Man\007'
+ bash help
+ bash --help
+ bash -c "help set"
+ help set |less
+ man date
+ date --date"@234567"
+ date --date='@234567'
+ date --date='@0'
+ date --date='@now'
+ date --date=now
+ date -c
+ date -u
+ man date
+ date +%s
+ date --date=`date +%s`
+ date --date=@`date +%s`
+ date
+ echo $TZ
+ echo ${TZ}
+ man bash
+ env
+ env |grep 5
+ env |grep IST
+ vi test.c
+ cd
+ vi test.c
+ PROMPT_COMMAND="echo -n [$(date +%H%M)]"
+ ls
+ vi test.c
+ man gdb
+ make test
+ gcc -g -o test test.c
+ test
+ ./test
+ hisory --help
+ history --help
+ help history
+ help stat
+ man stat
+ man date
+ date --date='@2147483647'
+ date --date='@2147483641'
+ objcopy --help
+ man gnu
+ man gcc
+ man cpp
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes1
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh -X oes1
+ ssh -X -p 2222 dev@localhost
+ rm /home/dev/.ssh/known_hosts
+ rm /home/dev/.ssh/known_hosts*
+ ssh -X -p 2222 dev@localhost
+ sudo zypper in gtypist
+ gtypist
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes2
+ PROMPT_COMMAND='test'
+ man PS1
+ man PS
+ echo $PROMPT_COMMAND
+ cat .bashrc
+ cat /etc/bash.bashrc
+ cat /etc/bash.bashrc |grep COMMAND
+ cat /etc/bash.bashrc
+ man printf
+ man gdb
+ TITLE="\[\e]2;TEST\a\]"
+ PROMPT_COMMAND='echo -ne "\033]0;YOUR TITLE GOES HERE\007"'
+ echo -ne "\033]0;YOUR TITLE GOES HERE\007"
+ echo -ne "\033]0;TEST\007"
+ echo $PROMPT_COMMAND
+ PROMPT_COMMAND='echo -ne "\033]0;TEST\007"'
+ PROMPT_COMMAND='echo -ne "\033]1;TESTING\007"'
+ PROMPT_COMMAND='echo -ne "\033]0;TESTING\007"'
+ PROMPT_COMMAND='echo -ne "\033];ESTING\007"'
+ PROMPT_COMMAND='echo -ne "\033;STING\007"'
+ PROMPT_COMMAND='echo -ne "\033];STING\007"'
+ echo -en "\e]0;Title\a"
+ PROMPT_COMMAND='echo -en "\e]0;Title\a"'
+ PROMPT_COMMAND='echo -ne "\033];STING\007"'
+ PROMPT_COMMAND='echo -en "\e]0;Title\a"'
+ PROMPT_COMMAND='echo -ne "\033];Title\007"'
+ PROMPT_COMMAND='echo -en "\e]0;Title\a"'
+ PROMPT_COMMAND='echo -en "\e[0;Title\a"'
+ PROMPT_COMMAND='echo -en "\e[0;Title12\a"'
+ PROMPT_COMMAND='echo -en "\e]0;Title12\a"'
+ mkdir fourstage
+ cd fourstage/
+ mkdir first
+ mkdir second
+ mkdir third
+ mkdir fourth
+ man vi
+ vi hello.c
+ echo $PROMPT_COMMAND
+ cd workspace/
+ mkdir tools
+ cd tools/
+ git clone https://github.com/wavexx/screenkey.git
+ cd screenkey/
+ ls
+ ./screenkey
+ ssh -X -p 2222 dev@localhost
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant halt
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes1
+ ip addr
+ scp root@164.99.101.37:/root/autoinst.xml ~/autoinsthari.xml
+ cat ~/autoinsthari.xml
+ cat ~/autoinsthari.xml |grep edir
+ cat ~/autoinsthari.xml |grep -i nss
+ scp root@164.99.101.37:/home/hpkunsoth/autoinst.xml ~/autoinsthariorg.xml
+ vimdiff autoinsthari.xml autoinsthariorg.xml
+ vim nds.conf
+ scp -p2222 nds.conf localhost:nds.conf
+ scp -P 2222 nds.conf localhost:nds.conf
+ scp -P 2222 nds.conf localhost:/home/dev/nds.conf
+ scp -P 2222 nds.conf root@localhost:/home/dev/nds.conf
+ kate autoinsthari.xml
+ cd workspace/OES/packer/packer_min/
+ time ./run_packer.sh test
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant destroy
+ SSH_KEY_PATH='/home/dev/workspace/OES/packer/key/id_rsa' BOX_PATH=../builds/vagrantBox20Sep18-180933.box vagrant up
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes1
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant ssh oes2
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box vagrant status
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant status
+ vi Vagrantfile
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant status
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant oes1
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant ssh oes1
+ ssh -X -p 2222 dev@localhost
+ ssh-keygen -R [localhost]:2222 -f /home/dev/.ssh/known_hosts
+ ssh -X -p 2222 dev@localhost
+ ssh -X -p 2222 root@localhost
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant ssh oes1
+ vi Vagrantfile
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant ssh oes1
+ vi http/autoinst.xml
+ ./run_packer.sh OESwithEDIR
+ vi Vagrantfile
+ sudo zypper in evince
+ sudo zypper in tts
+ tts
+ sudo zypper in jovie
+ sudo zypper in festival
+ sudo zypper in xsel
+ sudo zypper in feh
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant ssh oes1
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant ssh oes2
+ rm ~/.ssh/known_hosts*
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant ssh oes2
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant ssh oes3
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant destroy
+ vi run_packer.sh
+ ./run_packer.sh test1
+ cd ~/Downloads/
+ ls
+ sha256sum linuxmint-19-cinnamon-64bit-v2\(*
+ dd bs=4M if=linuxmint-19-cinnamon-64bit-v2\(1\).iso of=/dev/sdb status=progress oflag=sync
+ sudo dd bs=4M if=linuxmint-19-cinnamon-64bit-v2\(1\).iso of=/dev/sdb status=progress oflag=sync
+ dmesg
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant destroy
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant global-status
+ vagrant destroy 1fac727 56fbcab d7c5474
+ cd ~/workspace/OES/packer/packer_min/ && SSH_KEY_PATH='./key/id_rsa' BOX_PATH=../builds/$baseName.box BOX_NAME=oes vagrant global-status
+ vagrant destroy aa6133a 5d3f459
+ cat run_packer.sh
+ vi run_packer.sh
+ ./run_packer.sh
+ ./run_packer.sh test
+ man bcb
+ man if
+ hexdump /proc/$$/auxv
+ man procfs
+ man getauxval
+ grep AT_BASE /usr/include/
+ grep -r AT_BASE /usr/include/
+ ls
+ cat test.c
+ view test.c
+ awk -F; '{print $1}'
+ awk -F; '{print $1}' ./test.c
+ awk -F";" '{print $1}' ./test.c
+ awk -F";" '/close/{print $1}' ./test.c
+ grep --help
+ grep --help |grep perl
+ grep --help |grep pyth
+ grep --help |grep -i pyth
+ help pushd
+ dirs
+ dir
+ dirs
+ cd Downloads/
+ cd gdb\ \(1\).pdf/
+ ls
+ dirs
+ dirs --help
+ dirs -p
+ dirs -v
+ pushd
+ pushd ~
+ dirs -v
+ push
+ pushd ~/Desktop/
+ dirs -v
+ podd
+ popd
+ bash -l
+ bash -login
+ cd
+ PROMPT_COMMAND='echo -en "\e]0;Title12\a"'
+ PROMPT_COMMAND='echo -en "\e]Title12\a"'
+ PROMPT_COMMAND='echo -en "\e]0;Title12\a"'
+ PROMPT_COMMAND='date'
+ time ls
+ echo "\uc38"
+ echo -e "\uc38"
+ echo -e "\u090"
+ .
+ hman -P w3m
+ man -P w3m
+ man man
+ blockdev --getbsz /dev/sda1
+ sudo blockdev --getbsz /dev/sda1
+ sudo fdisk -l
+ cat /sys/block/sda/queue/physical_block_size
+ yast2 repositories
+ sudo yast2 repositories
+ sudo yast2
+ sudo fdisk -l
+ free -h
+ fdisk -l
+ sudo fdisk -l
+ parted
+ sudo parted
+ gparted
+ perf
+ sudo zypper in perf
+ sudo perf
+ sudo perf record
+ rm perf.data
+ su
+ echo -e "\u0904"
+ echo -e "\u904"
+ echo -e "\u950"
+ echo -e "\u966"
+ echo -e "\u967"
+ echo -e "\u968"
+ echo -e "\u969"
+ echo -e "\u979"
+ echo -e "\u971"
+ echo -e "\u96A"
+ echo -e "\u96B"
+ echo -e "\u96C"
+ echo -e "\u96D"
+ echo -e "\u96E"
+ echo -e "\u96F"
+ echo -e "\u9260946"
+ echo -e "\u926\u946"
+ echo -e "\u926\u946\u093F\u0935"
+ echo -e "\u926\u946\u0935\u093F"
+ echo -e "\u926\u946\u093F\u0935"
+ echo -e "\u926\u946\u093F\u0935\u0926\u093E"
+ echo -e "\u926\u946\u093F\u0935\u0926\u093E\u0938"
+ zsh
+ hexdump /proc/$$/auxv
+ echo ${ENV}
+ echo ${BASH_ENV}
+ env
+ env|grep AU
+ LD_SHOW_AUXV=1
+ ls
+ export LD_SHOW_AUXV=1
+ ls
+ cd workspace/tools/screenkey/
+ ./screenkey
+ man ls
+ ./screenkey --help
+ ./screenkey --scr 1
+ vim /var/log/messages
+ sudo cp /var/log/messages /tmp/test.log
+ vim /tmp/test.log
+ sudo chown dev:dev /tmp/test,log
+ sudo chown dev /tmp/test,log
+ sudo chown dev /tmp/test.log
+ vim /tmp/test.log
+ sed -i -r 's/\S+//' /tmp/test.log
+ vim /tmp/test.log
+ man sudo
+ man cp
+ sudo cp --preserve=mode,ownership /var/log/messages /tmp/test.log
+ vim /tmp/test.log
+ ll /tmp/test.log
+ sudo cp --preserve=ownership /var/log/messages /tmp/test.log
+ ll /tmp/test.log
+ ll /var/log/messages
+ sudo cp --preserve=ownership /var/log/messages /tmp/var.log
+ sudo chown dev:dev /tmp/var.log
+ groups
+ sudo chown dev:users /tmp/var.log
+ sudo cp --preserve=ownership /tmp/var.log /tmp/test.log
+ vi /tmp/test.log
+ sed -i -r 's/\S+//2' /tmp/test.log
+ vi /tmp/test.log
+ sudo cp --preserve=ownership /tmp/var.log /tmp/test.log
+ vi /tmp/test.log
+ sed -i -r 's/\S+//1,2' /tmp/test.log
+ sed -i -r 's/\S+//1 2' /tmp/test.log
+ echo $IFS
+ export IFS=':'
+ cat /tmp/test.log |cut -f1
+ cat /tmp/test.log |cut -f2
+ cat /tmp/test.log |awk '{print $1}'
+ cat /tmp/test.log |awk '{print $2}'
+ echo $IFS
+ IFS=':'
+ echo $IFS
+ export IFS=':' cat /tmp/test.log |awk '{print $2}'
+ evince ~/Downloads/gdb.pdf
+ evince ~/Downloads/gdb.pdf.gz
+ ll /tmp/test.log
+ ll /tmp/test.log -h
+ stat --format "logical size= %s \n phisical size in blocks = %b \n physical size in bytes= %B"
+ stat --format "logical size= %s \n phisical size in blocks = %b \n physical size in bytes= %B" /tmp/test.log
+ stat --format 'logical size= %s \n phisical size in blocks = %b \n physical size in bytes= %B' /tmp/test.log
+ stat --format 'logical size= %s /\n phisical size in blocks = %b \n physical size in bytes= %B' /tmp/test.log
+ stat --format "logical size= %s /\n phisical size in blocks = %b \n physical size in bytes= %B" /tmp/test.log
+ echo $((12056 * 512))
+ sudo fdisk -l
+ sudo parted -l /dev/sda
+ sudo parted -alignment-check
+ sudo parted -alignment-check 1
+ sudo parted -l /dev/sda
+ sudo parted -l /dev/sda | awk '/^ [0-9]+/ { print $1 }'
+ sudo parted -l /dev/sda | awk '/^ [0-9]+/ { print $1 }' | xargs echo
+ sudo parted -l /dev/sda | awk '/^ [0-9]+/ { print $1 }' | xargs -L1 echo
+ mkdir ~/newDIR
+ touch ~/newDIR/{1..100}
+ ls ~/newDIR/
+ strace ls ~/newDIR/
+ ls ~/newDIR/
+ ls ~/newDIR/ -S
+ ls ~/newDIR/ -u
+ ls ~/newDIR/ -ui
+ vim /tmp/test.log
+ ls -l
+ ls -l ~/newDIR/
+ ls -lS ~/newDIR/
+ ls -l ~/newDIR/ -x
+ ls -l ~/newDIR/ -h
+ ls --sort ~/newDIR/
+ ls ~/newDIR/ --sort
+ ls --help
+ ls -v
+ ls -v ~/newDIR/
+ ls -v -x ~/newDIR/
+ ls -v -x ~/newDIR/ |wc -l
+ ls -v -x ~/newDIR/
+ ls ~/newDIR/
+ ls ~/newDIR/ |wc -l
+ ls ~/newDIR/ |sort
+ ls ~/newDIR/ |sort -n
+ man stat
+ man 1 stat
+ man parted
+ man xargs
+ vimtutor
+ vim
+ cd
+ mkdir /mnt/OES
+ sudo mkdir /mnt/OES
+ sudo mount /mnt/OES/ ~/workspace/OES/ISO/OES2018-DVD-x86_64-GMC1-Media1.iso
+ sudo mount ~/workspace/OES/ISO/OES2018-DVD-x86_64-GMC1-Media1.iso /mnt/OES/
+ cd /mnt/OES/
+ bash autorun.sh
+ winetricks
+ winecfg
+ winedbg ~/Downloads/gw14.0.0-115215_client_win_multi.exe
+ wine ~/Desktop/GroupWise/grpwise.exe
+ winedbg ~/Desktop/GroupWise/grpwise.exe
+ sudo zypper in foremost
+ yum
+ sudo zypper in pacman
+ sudo zypper in yum
+ yum install foremost
+ sudo yum install foremost
+ rpm -Uvh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.el7.rf.x86_64.rpm
+ debugfs
+ sudo debugfs -w /dev/mapper/control
+ fdisk -l
+ sudo fdisk -l
+ sudo debugfs -w /dev/sda6
+ sudo debugfs -w /dev/disk/by-path/pci-0000\:00\:17.0-ata-3-part6
+ pip install -U RBTools
+ pip install --upgrade pip
+ su
+ ~/Desktop/Novell\ Messenger.desktop
+ wine '~/Desktop/Novell\ Messenger.desktop'
+ wine ~/Desktop/Novell\ Messenger.desktop
+ pip install --upgrade wheel
+ sudo zypper in python-setuptools
+ pip install --upgrade wheel
+ sudo pip install --upgrade wheel
+ su
+ ssh root@164.99.100.203
+ ssh root@164.99.100.209
+ ls ~/newDIR/
+ ls ~/newDIR/ | sort -n
+ bash --help
+ bash -c ' echo $$'
+ python --help
+ python --help |grep command
+ python --help |less
+ perl --help | less
+ touch ~/newDIR/a{1..10}
+ touch ~/newDIR/A{1..10}
+ touch ~/newDIR/0{1..10}
+ touch ~/newDIR/{2,5,6}{1..10}
+ ll ~/newDIR/{2,5,6}{1..10}
+ ls --help
+ ls --help | grep reg
+ ls --help | grep r
+ ls --help | grep pattern
+ ls --help | grep exp
+ grep --help | grep '-E'
+ grep --help | grep '\-E'
+ grep --help | grep '\-e'
+ ll ~/newDIR/ | grep -e '^[0-9]'
+ ll ~/newDIR/ | grep -e '^[0-9]+'
+ ls ~/newDIR/ | grep -e '^[0-9]+'
+ ls --help
+ ls -1
+ ls
+ ls -1
+ ls -1 ~/newDIR/
+ ls -1 ~/newDIR/ | grep -e "^A"
+ ls -1 ~/newDIR/ | grep -e "^[0-9]"
+ ls -1 ~/newDIR/ | grep -e "^[89]"
+ ls -1 ~/newDIR/ | grep -e "^[89A]"
+ ls -1 ~/newDIR/ | grep -e "^[8][8]"
+ ls -1 ~/newDIR/ | grep -e "[8][8]$"
+ ls -1 ~/newDIR/ | grep -e "[8]$"
+ ls -1 ~/newDIR/ | grep -e "^[8]$"
+ ls -1 ~/newDIR/ | grep -e "^A.$"
+ touch ~/newDIR/A
+ touch ~/newDIR/AA
+ ls -1 ~/newDIR/ | grep -e "^A.$"
+ ls -1 ~/newDIR/ | grep -e "^A*$"
+ ls -1 ~/newDIR/ | grep A*
+ ls -1 ~/newDIR/ | grep A*A
+ touch ~/newDIR/AA.A
+ ls -1 ~/newDIR/ | grep -e "A[\.]"
+ cat ~/he
+ vi ~/test.c
+ make ~/test
+ ~/test
+ cc
+ cc --help
+ man cc
+ ~/test
+ gcc -g -o ~/test.gdb ~/test.c
+ gdb
+ gdb ~/test.gdb
+ man awk
+ info gdb
+ cd
+ cd ~/learning/26Sept18/
+ ls
+ vi dt.sh
+ man uniq
+ man sed
+ man tr
+ man man
+ man pcrepattern
+ ssh root@164.99.114.33
+ wine ~/Desktop/Messenger/nmau.exe
+ ~/Desktop/Novell\ Messenger.desktop
+ wine ~/Desktop/Messenger/nmau.exe
+ wine ~/Desktop/Messenger/nmau.exe -h
+ find /home/dev/Desktop/GroupWise/ -name "setup.cfg"
+ find /home/dev/Downloads/ -name "setup.cfg"
+ vi /home/dev/Downloads/gw120windowsclient/setup.cfg
+ file ~/Downloads/gw14.0.0-115215_client_win_multi.exe
+ ps -aux
+ ps -aux |grep wine
+ wine ~/Downloads/gw14.0.0-115215_client_win_multi.exe
+ rm -fr ~/.wine/
+ export WINEARCH=win32
+ wine ~/Downloads/gw14.0.0-115215_client_win_multi.exe
+ winecfg
+ wine ~/Downloads/gw14.0.0-115215_client_win_multi.exe &
+ wine /home/dev/Downloads/gw/client/win32/grpwise.exe
+ cd ~/Desktop/GroupWise/
+ ls
+ wine grpwise.exe
+ cd
+ mkdir learning
+ cd learning/
+ mkdir 26Sept18
+ cd 26Sept18/
+ vi dt.sh
+ bash dt.sh ls
+ bash dt.sh ls abc
+ vi dt.sh
+ bash dt.sh ls abc
+ bash dt.sh ls ~/newDIR/
+ vi dt.sh
+ bash dt.sh ls ~/newDIR/
+ chmos u+x dt.sh
+ chmod u+x dt.sh
+ ./dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ ls
+ cat ls_26_09_18.10_54_04.log
+ rm ls_26_09_18.10_54_04.log
+ vi dt.sh
+ ./dt.sh ls
+ cat ls_26_09_18.11_00_35.log
+ vi dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ ./dt.sh ls ~/newDIR/
+ ls
+ rm ls*
+ ./dt.sh ls ~/newDIR/
+ ls
+ cat ls_26_09_18.11_03_54.log
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ cat ls_26_09_18.11_04_42.log
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ ls
+ cat ls_26_09_18.11_05_47.log
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ rm ls *
+ ls
+ killall wineserver
+ ps
+ awk -v test=Hello '{print $test}'
+ awk -v test=Hello '{print $test}' /tmp/a.log
+ sudo chown dev:user /tmp/a.log
+ sudo chown dev:users /tmp/a.log
+ awk -v test=Hello '{print $test}' /tmp/a.log
+ awk -v test=Hello '{print $test,$1}' /tmp/a.log
+ awk -v test=Hello '{print test,$1}' /tmp/a.log
+ awk -v test=Hello '{print test}' /tmp/a.log
+ awk -v test=Hello '{print test,$1}' /tmp/a.log
+ awk -v test=Hello '{print test,$1} {FS=":" print $2}' /tmp/a.log
+ vi 1.awk
+ awk -f 1.awk /tmp/a.log
+ vi 1.awk
+ awk -f 1.awk /tmp/a.log
+ vi dt.sh
+ chmod u+x dt.sh
+ ./dt.sh ls
+ ls
+ vi dt.sh
+ ./dt.sh ls
+ ls
+ vi dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ ls
+ cat ls_26_09_18.14_44_56.log
+ vi dt.sh
+ ./dt.sh ls
+ cat ls_26_09_18.14_45_21.log
+ ls
+ cat ls_26_09_18.14_45_21.log
+ vi dt.sh
+ ./dt.sh ls
+ vi dt.sh
+ ./dt.sh ls
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ ls
+ rm ls*
+ ls
+ rm 1
+ ls
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ vi dt.sh
+ ./dt.sh ls ~/newDIR/
+ cat dt.sh
+ vim .vimrc
+ vim dt.sh
+ mv .vimrc ~/
+ vim dt.sh
+ vim ~/.vim
+ vim ~/.vimrc
+ vim dt.sh
+ echo 192.168.254.33
+ echo 192.168.254.33 |grep -e "^19"
+ echo 192.168.254.33 |grep -e "^[0-9]+"
+ echo 192.168.254.33 |grep -e "^[0-9]"
+ echo 192.168.254.33 |grep -e "^[0-9]+?"
+ echo 192.168.254.33 |grep -e "^[0-9]+"
+ echo 192.168.254.33 |grep -e "^[0-9]*"
+ echo 192.168.254.33 |grep -e "^([0-9]*)"
+ echo 192.168.254.33 |grep -e "^([0-9]{3}"
+ echo 192.168.254.33 |grep -e "([0-9]{3}"
+ python
+ echo 192.168.254.33 |grep -e "([0-9]\?"
+ echo 192.168.254.33 |grep -e "[0-9]\?"
+ su
+ cd ~/learning/26Sept18/
+ ls
+ ./dt.sh ls
+ ls
+ ./dt.sh ls ~/newDIR/
+ date
+ date --help
+ date +%d%m%y
+ date +%d.%m.%y
+ date +%d_%m_%y.%H_%M_%S
+ ./dt.sh ls ~/newDIR/
+ date +%d_%m_%y.%H_%M_%S
+ sudo zypper install -C "debuginfo(build-id)=6a3a0dcbad0bb2631ad2e6497238ce5835ad8680"
+ sudo zypper install -C glibc-debuginfo
+ man awk
+ cd learning/26Sept18/gdb/
+ ls
+ cd ..
+ cp *.c gdb/
+ cd gdb/
+ ls
+ vi input.c
+ cc -g input.c -i input
+ cc -g input.c -o input
+ ls
+ ./input
+ file input*
+ awk -F'.' '{print $1,$2,$3,$4}'
+ cd ..
+ ls
+ vi 1.awk
+ su
+ awk -F'.' -s 1.awk
+ awk -F'.' '{print $1,$2}'
+ awk -F'.' '{if($1 > 255) print $1,$2}'
+ awk -F'.' '{if($1 > 255 && $1 < 0) print $1,$2}'
+ awk -F'.' '{if($1 < 255 && $1 > 0) print $1,$2}'
+ awk -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2}'
+ awk -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2 else print "wrong IP"}'
+ awk -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2 else print wrong\ IP}'
+ awk -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2 else print wrong}'
+ awk -v error="wrong IP addr" -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2 else print error}'
+ awk -v error="wrong IP addr" -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2 else print $1 }'
+ awk -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2 else $1}'
+ awk -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2 }'
+ awk -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2 ; else print $1 }'
+ awk -v error="wrong IP addr" -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print $1,$2; else print error }'
+ awk -v success="IP address is right which is => " error="wrong IP addr Which is => " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }'
+ awk -v success="IP address is right which is \=> " error="wrong IP addr Which is \=> " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }'
+ awk -v success="IP address is right which is > " error="wrong IP addr Which is > " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }'
+ awk -v success="IP address is right which is " error="wrong IP addr Which is " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }'
+ awk -v success="IP address is right which is " -v error="wrong IP addr Which is " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }'
+ awk -v success="IP address is right which is > " -v error="wrong IP addr Which is " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }'
+ awk -v success="IP address is right which is :- " -v error="wrong IP addr Which is :- " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }'
+ awk -v success="IP address is right which is :- \n " -v error="wrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }'
+ vi ip
+ awk -v success="IP address is right which is :- \n " -v error="wrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="\e[31mwrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print success,$0; else print error,$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="\e[31mwrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\e[31m success,$0"; else print error,$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="\e[31mwrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[31m success,$0"; else print error,$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="\e[31mwrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[31m success,$0\033[0m"; else print error,$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="\e[31mwrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[32m success\033[0m",$0; else print error,$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="\e[31mwrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[32m $success\033[0m",$0; else print error,$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="\e[31mwrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[32m $success\033[0m",$0; else print "\033[32m",error,"\033[0m",$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="\e[31mwrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[32m $success\033[0m",$0; else print "\033[31m",error,"\033[0m",$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="\e[31mwrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[32m",success,"\033[0m",$0; else print "\033[31m",error,"\033[0m",$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="Wrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[32m",success,"\033[0m",$0; else print "\033[31m",error,"\033[0m",$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="Wrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[32m",success,"\033[0m",$0; else print "\033[31m5m",error,"\033[0m",$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="Wrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[32m",success,"\033[0m",$0; else print "\033[31m\033[5m",error,"\033[0m",$0 }' ip
+ awk -v success="IP address is right which is :- \n " -v error="Wrong IP addr Which is :- \n " -F'.' '{if($1 < 255 && $1 > 0 && $2 < 255 && $2 > 0 && $3 < 255 && $3 > 0 && $4 < 255 && $4 > 0 ) print "\033[32m",success,"\033[0m",$0; else print "\033[31m",error,"\033[0m",$0 }' ip
+ awk '{print $2}' /tmp/a.log
+ awk -var hostname=`hostname` '{if ($2 == hostname) $2=""; print $0}' /tmp/a.log
+ awk -v hostname=`hostname` '{if ($2 == hostname) $2=""; print $0}' /tmp/a.log
+ vi /tmp/a.log
+ awk -v hostname=`hostname` '{if ($2 == hostname) $2=""; print $0}' /tmp/a.log
+ vi version
+ awk '{print $1,$2}'
+ awk '{print $1,$2}' version
+ awk -F'[ .]' '{print $1,$2}' version
+ awk -F'[ .]' '{print Hello}' version
+ awk -F'[ .]' '{print "Hello"}' version
+ awk -F'[ .]' '{print '$1.$2.$3'}' version
+ awk -F'[ .]' '{print $1.$2.$3}' version
+ awk -F'[ .]' '{print $1,".",$2,"."$3}' version
+ awk -F'[ .]' '{print $1.".".$2.".".$3}' version
+ awk -F'[ .]' '{print $1"."$2"."$3}' version
+ awk -F'[ .]' '{if($1 >= $4 || $2 >= $5 || $3 >= $6) print $1"."$2"."$3; else print $4"."$5"."$6 }' version
+ cat version
+ awk -F'[ .]' '{if($1 >= $4 && $2 >= $5 && $3 >= $6) print $1"."$2"."$3; else print $4"."$5"."$6 }' version
+ info gdb
+ cd ..
+ vi ip
+ cat ip
+ cat ip |grep -e "^[0-9]+"
+ cat ip |grep -e "^[0-9]?"
+ cat ip |grep -e "^[0-9]/?"
+ cat ip |grep -e "^[0-9]"
+ cat ip |grep -e "^[0-9]+?"
+ cat ip |grep -e "^[0-9]"
+ cat ip |grep -e "^/d"
+ cat ip |grep -e "^\d"
+ cat ip |grep -e "^[\d]"
+ cat ip |grep -e "^[/d]"
+ cat ip |grep -e "^\d"
+ cat ip |grep -e '^\d'
+ cat ip |grep -e '^[0-9]'
+ cat ip |grep -e '^[0-9]+'
+ cat ip |grep -e '^[0-9]?'
+ cat ip |grep -e '^[0-9]?/'
+ cat ip |grep -e '^[0-9]?\'
+ cat ip |grep -e '^[0-9]/?'
+ cat ip |grep -e '^[0-9]'
+ cat ip |grep -E '^[0-9]'
+ cat ip |grep -E '^[0-9]+'
+ cat ip |grep -E '^[0-9]+.'
+ cat ip |grep -E '^[0-9]+.[0-9]+.'
+ cat ip |grep -E '^[0-9]+.[0-9]+.[0-9]+'
+ cat ip |grep -E '^[0-9]+.[0-9]+.[0-9]+.[0-9]+'
+ cat ip |grep -E '^[0-9]{1,3}.[0-9]+.[0-9]+.[0-9]+'
+ cat ip |grep -E '^[0-9]{1,2}.[0-9]+.[0-9]+.[0-9]+'
+ cat ip |grep -E '^[0-9]{1,2}.[0-9]{1,2}+.[0-9]+.[0-9]+'
+ cat ip |grep -E '^[0-9]{1,2}.[0-9]{1,2}+.[0-9]{1,2}+.[0-9]+'
+ cat ip |grep -E '^[0-9]{1,2}.[0-9]{1,2}.[0-9]{1,2}.[0-9]{1,2}'
+ cat ip |grep -E '^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}'
+ cat ip |grep -E '^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
+ cat ip |grep -E '^0?[0-9]'
+ cat ip |grep -E '^0?[0-9]+'
+ cat ip |grep -E '^0?[0-9]|1[0-9]{0,2}'
+ cat ip |grep -E '^0?[0-9]|1[0-9]{0,2}|2[0-9]{0,2}'
+ cat ip |grep -E '^0?[0-9]{1}|1[0-9]{0,2}|2[0-9]{0,2}'
+ cat ip |grep -E '^0?[0-9]{1}\|1[0-9]{0,2}|2[0-9]{0,2}'
+ cat ip |grep -E '^0?[0-9]{1}\|1[0-9]{0,2}\|2[0-9]{0,2}'
+ cat ip |grep -E '^0?[0-9]{1}/|1[0-9]{0,2}|2[0-9]{0,2}'
+ cat ip |grep -E '^0?[0-9]{1}/|1[0-9]{0,2}/|2[0-9]{0,2}'
+ cat ip |grep -E '^(0?[0-9]{1}/|1[0-9]{0,2}/|2[0-9]{0,2)}'
+ cat ip |grep -E '^(0?[0-9]{1}/|1[0-9]{0,2}/|2[0-9]{0,2})'
+ cat ip |grep -E '^(0?[0-9]/|1[0-9]{0,2}/|2[0-9]{0,2})'
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-9]{0,2})'
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-9]{0,2})\.'
+ vi ip
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-9]{0,2})\.'
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2})\.'
+ vi ip
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2})\.'
+ cat ip
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2})\.'
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2})\.|2[6-9]{0,1}'
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2})|2[6-9]{0,1}\.'
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.'
+ vi ip
+ cat ip |grep -E '^(0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.}{3}'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}'
+ cat ip |grep -E "^\d"
+ cat ip |grep -E "^/d"
+ cat ip |grep -E "^[0-9]"
+ cat ip |grep -E '^(([0]?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}([0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1}))'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}(0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1}))'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}[0-9]+'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}([0-9]+)'
+ cat ip |grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}([0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})'
+ grep -E '^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})\.){3}([0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1})' ip
+ vi ip
+ vi nu
+ grep -E "^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1}))
+
+ grep -E "^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1}))"
+ grep -E "^((0?[0-9]|1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1}))" nu
+ grep -E "^((0?[0-9]|0?1[0-9]{0,2}|2[0-5]{0,2}|2[6-9]{0,1}))" nu
+ grep -E "^((0?[0-9]|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1}))" nu
+ vi nu
+ grep -E "^((0?[0-9]|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1}))" nu
+ grep -E "^((0?[0-9]|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1}))" ip
+ grep -E "^((0?[0-9]|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1})\.)" ip
+ grep -E "^((0?[0-9]|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1})\.){3}" ip
+ grep -E "^((0?[0-9]|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1}))" nu
+ vi nu
+ grep -E "^((0?[0-9]|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1}))" nu
+ grep -E "^((0?[0-9]{0,2}|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1}))" nu
+ grep -E "^((0?[0-9]{0,2}|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1})\.){3}" ip
+ grep -E "^((0?[0-9]{1,2}|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1})\.){3}" ip
+ grep -E "^(((0?[0-9]{1,2}|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1})\.){3})(0?[0-9]{0,2}|0?1[0-9]{0,2}|0?2[0-5]{0,2}|2[6-9]{0,1})" ip
+ history
+ history |awk '{$1=""; print $0}'
+ history |awk '{$1=""; print $0}' > ~/learning/history

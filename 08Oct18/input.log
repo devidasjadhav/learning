@@ -1,0 +1,25 @@
+Currently logging to "input.log".
+Logs will overwrite the log file.
+Output will be sent only to the log file.
+Starting program: /home/dev/learning/08Oct18/input.gdb 
+Missing separate debuginfo for /lib64/ld-linux-x86-64.so.2
+Try: zypper install -C "debuginfo(build-id)=ad9b281cff1fcb4c112969d873a4870f8c94fa7c"
+Missing separate debuginfo for /lib64/libc.so.6
+Try: zypper install -C "debuginfo(build-id)=6a3a0dcbad0bb2631ad2e6497238ce5835ad8680"
+[Inferior 1 (process 4338) exited normally]
+Starting program: /home/dev/learning/08Oct18/input.gdb >> input.log
+[Inferior 1 (process 4343) exited normally]
+
+ADD return = 3
+enter first number
+: enter second number
+: INSIDE Add function
+ADD return 21 + 32 = 53
+Hello World!
+ mypid 4382
+INSIDE Add function
+ADD return = 3
+enter first number
+: enter second number
+: INSIDE Add function
+ADD return 0 + 0 = 0
