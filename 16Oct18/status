@@ -1,0 +1,127 @@
+GDB
+==============================================================
+4.11 Debugging Forks
+set follow-fork-mode <parent> | child
+show follow-fork-mode <parent> | child
+
+
+set detach-on-fork <on>|off
+
+
+set follow-exec-mode <same> | new
+
+
+flow
+start program
+show execution with default mode
+i.e. parent and on 
+info inferior for parent and child
+
+restart program
+change to child
+
+contine
+
+info inferior for parent and child
+kill both inferiors
+retart program
+
+set detach-on-fork on
+
+continue
+
+info inferiors
+
+
+vim
+======================================================
+usr_04
+
+operators and motion
+
+O N M  O move n times using M
+
+N O M  n times O M 
+
+N O X M N times O move X times using M
+
+dw
+
+d$
+
+
+Changing Text
+example of c comand
+c2wtest test<ESC>
+
+repeting using .
+
+MORE CHANGES
+
+dd
+cc
+d$
+c$
+
+SHORTcut
+x > dl
+X > dh
+D > d$
+C > c$
+s > cl
+S > cc
+
+where to put count EXPLAINED ubove
+
+replacing charachter 
+
+r
+
+
+Repeating last change
+
+.
+
+Visual mode and visual block mode
+
+velllld
+visual end of word 4 times l d
+
+v2wd
+vtxd
+vfxd
+
+numbers
+v20jd
+v20wd
+
+
+V
+
+selectiong line
+
+CTRL-V
+
+visual block
+
+
+4.9 Replace mode
+twice insert or R
+
+4.8 Text object
+
+diw
+daw
+
+4.7 clipboard copy did not work
+
+4.6 coppying text
+
+c command
+
+swapping chars
+use xp
+
+4.5 moving around text use delete or x and paste using p
+
+

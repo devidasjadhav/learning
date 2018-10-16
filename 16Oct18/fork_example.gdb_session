@@ -1,0 +1,16 @@
+warning: Target does not support trace notes, user ignored
++start
+Temporary breakpoint 1 at 0x4006d0: file fork_example.c, line 6.
+Starting program: /home/dev/learning/16Oct18/fork_example 
+Missing separate debuginfo for /lib64/ld-linux-x86-64.so.2
+Try: zypper install -C "debuginfo(build-id)=ad9b281cff1fcb4c112969d873a4870f8c94fa7c"
+Missing separate debuginfo for /lib64/libc.so.6
+Try: zypper install -C "debuginfo(build-id)=6a3a0dcbad0bb2631ad2e6497238ce5835ad8680"
+
+Temporary breakpoint 1, main () at fork_example.c:6
+6		int ret_pid,my_pid, dbg=0,bye=0,count=0, nsec = 1;
++set trace-commands off
+7		printf("Program PID: %d\n",getpid());
++n
+8		printf("=====================================================================================================\n");
++tui enable 
