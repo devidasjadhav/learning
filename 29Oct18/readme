@@ -1,0 +1,189 @@
+:edit newfile
+:edit! newfile
+:hide newfile
+
+
+Multiple files
+
+vim a b c
+
+:next
+:prev
+
+:next!
+:prev!
+
+:wnext
+:wprev
+
+:hide next
+:hide prev
+
+:args
+
+:first
+:2next
+
+:set autowrite
+:setnoautowrite
+
+
+:args new.c a.c xyz
+OR
+:args *.txt
+
+
+CTRL+^ reopen last file
+
+Marking across files
+
+small letter for local mark
+capital letter for Global mark
+
+
+
+50%mF
+GmB
+ggmT
+
+:next
+
+`F
+tilda preserve row and column
+
+:next
+
+'F
+first non void char
+
+
+Backfile 
+not as important
+
+:set backup
+:set backupnext=.bak
+
+:set patchmode=.orig
+
+
+Copy from other file
+
+:edit fname
+3yy
+:next
+p
+
+Readonly
+
+vim -R fname
+you can use w! to rite
+
+
+vim -M fname 
+you can't use w!
+but you can use 
+set write
+set modifiable
+
+
+Changing file
+
+start 
+:edit newfile
+
+:saveas test   # write file test
+
+
+:file test
+
+
+
+
+
+
+
+
+
+
+
+
+
+=====================================================================
+
+WINDOWS
+
+:split
+
+:close
+
+
+:split fname
+
+:new  create split and empty file
+
+
+
+:3split fname 
+
+open 3 line split
+
+
+change height 
+CTRL-W +
+reduce height
+CTRL-W -
+
+set height
+<height>CTRL-W _
+
+
+:set winheight
+:set winminheight
+
+:set equalalways
+
+
+
+
+----------------------------------------------
+
+:vsplit
+:vsplit fname
+
+:vnew
+
+
+
+----------------------------------------------
+
+moving between spleets
+
+CTRL-W h,j,k,l
+
+CTRL-W t,b top and bottom
+
+
+CTRL-W H,J,K,L
+
+moves vindows to Legt Bottom etc
+
+:qall
+
+:wall
+
+:wqall
+
+:qall!
+
+
+-----------------------------------------
+
+vim -o a.c b.c c.c
+
+vim -O a.c b.c c.c
+
+:vertical all moves all windows virticle even form args
+
+vimdiff a.c b.c
+
+
